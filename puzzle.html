@@ -43,6 +43,15 @@
             margin-top: 20px;
             
         }
+        #butn{
+            margin-left:130px;
+        }
+        #print{
+            margin-left: 555px;
+        }
+        .txt-myinput{
+            border-radius:10px;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +59,22 @@
         <h1 style="color: antiquewhite;">Memmory Game</h1>
       </div>
    <br/>
+   <label type="button" class="btn-gettxt">Enter your Name :</label>
+    <input type="text" placeholder="Name" class="txt-myinput"/><br/><br/>
+    <button type="button" id="butn" class="btn-gettxt btn btn-primary">Enter</button><br><br>
+    <div id="print">
+    <strong><h2>Welcome</h2>  </strong>
+    <strong ><h3 class="finaltxt-content">  </h3></strong>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $(".btn-gettxt").click(function(){
+                var mytxtcontent = $(".txt-myinput").val();
+                $(".finaltxt-content").html(mytxtcontent);
+            });
+        });
+        </script>
    <br/>
    <br/>
     <div class="container">
